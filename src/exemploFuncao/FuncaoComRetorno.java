@@ -3,7 +3,16 @@ package exemploFuncao;
 
 import java.util.Scanner;
 
+
 public class FuncaoComRetorno {
+    // Não usamos void pq a função vai ter um retorno do tipo DOUBLE
+    public static double pedirNumero(){
+    Scanner e = new Scanner(System.in);
+        System.out.print("Digite um número: ");
+        double num =e.nextDouble();
+        //Vamos retornar valor digitado pelo usuário para nosso programa
+        return num;
+    }
 
     public static void criarMenu() {
 
@@ -29,39 +38,35 @@ public class FuncaoComRetorno {
     }
 
     public static void calcularDobro() {
-        Scanner e = new Scanner(System.in);
+       //Remover Scanner e print e o next
+       //Trocar por pedirNumero
+       //Armazenando uma variavel nesta função
         double n, dobro;
-        System.out.print("Digite um número: ");
-        n = e.nextDouble();
+        n = pedirNumero();
         dobro = n * 2;
         System.out.println("Dobro de " + n + " = " + dobro);
     }
 
     public static void somar2Numeros() {
-        Scanner e = new Scanner(System.in);
-        int n, o, soma;
-        System.out.print("Digite um número: ");
-        n = e.nextInt();
-        System.out.print("Digite outro número: ");
-        o = e.nextInt();
+        
+        double n, o, soma;
+        n = pedirNumero();
+        
+        o = pedirNumero();
         soma = o + n;
         System.out.println("A soma de " + n + " + " + o + " = " + soma);
     }
 
     public static void raizQuadrada() {
-        Scanner e = new Scanner(System.in);
         double n, resultado;
-        System.out.print("Digite um número: ");
-        n = e.nextInt();
+        n = pedirNumero();
         resultado = Math.sqrt(n);
         System.out.println("A raiz quadrada de " + n + " = " + resultado);
     }
 
     public static void calcQuadrado() {
-        Scanner e = new Scanner(System.in);
         double n, resultado;
-        System.out.print("Digite um número: ");
-        n = e.nextInt();
+        n = pedirNumero();
         resultado = Math.pow(n, 2);
         System.out.println("A raiz quadrada de " + n + " = " + resultado);
     }
